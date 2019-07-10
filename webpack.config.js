@@ -2,6 +2,7 @@ const htmlPulgin=require('html-webpack-plugin');
 const extractPlugin=require('mini-css-extract-plugin');
 const path=require('path');
 const env = process.env.NODE_ENV;
+const dev = process.env.DOOLS;
 module.exports={
 devServer:{
     port:'9090'
@@ -25,6 +26,7 @@ output:{
     path:path.resolve('./dist'),
 },
 mode:env,
+devtool:dev,
 module:{
     rules:[
         {
